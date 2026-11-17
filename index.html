@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Surprise For You ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Pacifico&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg"></canvas>
+
+<main class="scene" id="scene">
+  <div class="stage">
+
+    <!-- Gift box -->
+    <div class="gift" id="gift" role="button" tabindex="0" aria-label="Open gift">
+      <svg viewBox="0 0 260 220">
+        <ellipse cx="130" cy="205" rx="105" ry="10" fill="rgba(120,20,60,.25)"/>
+        <rect x="30" y="95" width="200" height="108" rx="6" fill="#d4202f"/>
+        <rect x="118" y="95" width="24" height="108" fill="#b50f1f"/>
+        <g fill="#fff" opacity=".85" font-size="13">
+          <text x="48" y="130">♥</text><text x="80" y="165">♥</text><text x="55" y="190">♥</text>
+          <text x="165" y="128">♥</text><text x="195" y="160">♥</text><text x="170" y="188">♥</text>
+        </g>
+        <g class="lid">
+          <rect x="20" y="68" width="220" height="38" rx="6" fill="#f1e6dc"/>
+          <rect x="20" y="98" width="220" height="8" fill="#d9c9ba"/>
+          <rect x="118" y="68" width="24" height="38" fill="#c1121f"/>
+          <ellipse cx="102" cy="58" rx="30" ry="14" fill="#d4202f" transform="rotate(-20 102 58)"/>
+          <ellipse cx="158" cy="58" rx="30" ry="14" fill="#d4202f" transform="rotate(20 158 58)"/>
+          <circle cx="130" cy="64" r="11" fill="#b50f1f"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Teddy bear -->
+    <div class="bear" id="bear">
+      <svg viewBox="0 0 240 270">
+        <circle cx="60" cy="52" r="23" fill="#d9a98a"/><circle cx="60" cy="52" r="12" fill="#f1cdb3"/>
+        <circle cx="180" cy="52" r="23" fill="#d9a98a"/><circle cx="180" cy="52" r="12" fill="#f1cdb3"/>
+        <ellipse cx="120" cy="195" rx="64" ry="60" fill="#e4b99a"/>
+        <ellipse cx="120" cy="205" rx="40" ry="38" fill="#f3d9c4"/>
+        <ellipse cx="68" cy="245" rx="28" ry="19" fill="#e4b99a"/><ellipse cx="172" cy="245" rx="28" ry="19" fill="#e4b99a"/>
+        <ellipse cx="68" cy="247" rx="14" ry="9" fill="#f3d9c4"/><ellipse cx="172" cy="247" rx="14" ry="9" fill="#f3d9c4"/>
+        <ellipse cx="58" cy="175" rx="19" ry="34" fill="#e4b99a" transform="rotate(18 58 175)"/>
+        <ellipse cx="182" cy="175" rx="19" ry="34" fill="#e4b99a" transform="rotate(-18 182 175)"/>
+        <circle cx="120" cy="95" r="64" fill="#e9c2a4"/>
+        <ellipse cx="120" cy="116" rx="27" ry="21" fill="#f6e0cd"/>
+        <circle cx="97" cy="90" r="5.5" fill="#3b2a24"/><circle cx="143" cy="90" r="5.5" fill="#3b2a24"/>
+        <circle cx="95.5" cy="88" r="1.8" fill="#fff"/><circle cx="141.5" cy="88" r="1.8" fill="#fff"/>
+        <ellipse cx="120" cy="105" rx="8.5" ry="6" fill="#4a2f27"/>
+        <path d="M120 111 v6 M120 117 q-8 7 -15 1 M120 117 q8 7 15 1" stroke="#4a2f27" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        <ellipse cx="82" cy="108" rx="9" ry="6" fill="#f4a5a5" opacity=".6"/><ellipse cx="158" cy="108" rx="9" ry="6" fill="#f4a5a5" opacity=".6"/>
+        <path d="M120 152 L84 138 L84 168 Z" fill="#c1121f"/><path d="M120 152 L156 138 L156 168 Z" fill="#c1121f"/>
+        <circle cx="120" cy="152" r="9" fill="#a50d1a"/>
+        <g transform="rotate(-4 120 232)">
+          <rect x="82" y="216" width="76" height="30" rx="4" fill="#f7e9d6" stroke="#d8b995"/>
+          <text x="120" y="237" text-anchor="middle" font-family="Pacifico,cursive" font-size="14" fill="#c1121f" id="signText">I Love You</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Rose -->
+    <svg class="rose" viewBox="0 0 80 140">
+      <path d="M40 60 C 42 90, 36 115, 40 135" stroke="#3f8f3a" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M40 105 C 62 95, 72 100, 70 112 C 58 118, 46 114, 40 105Z" fill="#59b04b"/>
+      <path d="M40 90 C 20 82, 8 88, 10 98 C 22 104, 34 100, 40 90Z" fill="#59b04b"/>
+      <circle cx="40" cy="42" r="26" fill="#b50f1f"/>
+      <circle cx="40" cy="42" r="19" fill="#d4202f"/>
+      <path d="M40 24 C 54 28, 58 44, 42 50 C 30 52, 28 40, 38 36" stroke="#8f0b17" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+</main>
+
+<!-- Letter -->
+<div class="modal" id="modal">
+  <article class="letter">
+    <div class="seal">❤</div>
+    <button class="x" id="x" aria-label="Close">×</button>
+    <p class="eyebrow" id="eyebrow">FOR YOU, WITH ALL MY LOVE</p>
+    <h2>I Love You So Much</h2>
+    <div class="divider"><span>♥</span></div>
+    <p>Every moment by your side is the most beautiful gift life has given me. Thank you for filling my days with tenderness, joy and so much love.</p>
+    <p>I wanted to give you this little surprise to remind you how special you are to me, and how much I carry you in my heart, every single moment.</p>
+    <footer>
+      <div><small>Always yours,</small><span class="sign" id="sign">I Love You</span></div>
+      <button id="close">Close letter</button>
+    </footer>
+  </article>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
